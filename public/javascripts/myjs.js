@@ -10,6 +10,7 @@ $(document).ready(function(){
   label_l_action();
   alter_menu();
   search_number();
+  check_it()
 } );
 function adding() {
   $("#add_button").click(function(){
@@ -38,6 +39,15 @@ function color_change(){
       h1.addClass("coloring"); 
   
 })};
+function check_it(){
+  $("#check").click(function(){
+    var inp=$("#check");
+    if(document.getElementById('check').checked)
+        inp.addClass("coloring")
+    else
+      inp.removeClass("coloring");
+  })
+}
 
 function disappearing(){
 $( ".nav_pic" ).click(function() { 

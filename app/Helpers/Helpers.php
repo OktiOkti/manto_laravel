@@ -23,5 +23,4 @@ class Helpers {
             <img  class="little_image" src="{{ asset('/storage/app/'.$product->path)}}" style="width:30%;" alt="{{$product->path}}">
           <button>Delete Product</button>
         </form>
-      </div>
-?>
+      </div>*/

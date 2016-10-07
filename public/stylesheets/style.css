@@ -12,6 +12,10 @@ body{
 }
 a{
   text-decoration: none;
+  text-align: right;
+}
+label{
+font-weight: 100;
 }
 /*style linkow*/
 .dotted_link{
@@ -555,7 +559,7 @@ content: "\f05a";
   left:10px;
 }
 .coloring{
-  color:red;
+  background-color: red;
 }
 .hiding{
   visibility: hidden;

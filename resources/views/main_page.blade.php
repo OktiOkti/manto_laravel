@@ -27,9 +27,22 @@
      </div>
     <div class="header_links_container">
      <ul class="list-inline">
+       
+       @if (Auth::guest())
        <li class="dotted_link" id="your_account">
-        <a href="login" >Twoje konto </a>
-       </li>
+        
+
+       <a href="login">  Twoje konto </a>
+         </li>
+        @else
+       <li class="dotted_link" id="your_account">
+        
+<a href="add">
+        {{ Auth::user()->name }} </a>
+         </li>
+        <li class="dotted_link" ><a href="{{ url('/logout') }}">Wyloguj się</a></li>
+       @endif
+       
        <li class="dotted_link" id="observed">Obserwowane (0)
        </li>
        <li class="black_link" id="products_cart"><strong>0 </strong>szt. za <strong>0,00 zł</strong>

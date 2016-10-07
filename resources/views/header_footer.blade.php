@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="{{{ asset('/font-awesome-4.6.3/css/font-awesome.min.css') }}}">
     <link href="{{{ asset('/stylesheets/style.css') }}}" rel="stylesheet">
 
+
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -23,13 +25,24 @@
  <div class="container"> 
    <header>
     <div class="logo_container">
-     <img src="images/header_logo.gif" alt="header_logo">
+     <img src="images/header_logo.gif" alt="header_logo" style="width:50%">
      </div>
     <div class="header_links_container">
      <ul class="list-inline">
+       @if (Auth::guest())
        <li class="dotted_link" id="your_account">
+        
+
          Twoje konto
-       </li>
+         </li>
+        @else
+       <li class="dotted_link" id="your_account">
+        
+
+        {{ Auth::user()->name }}
+         </li>  
+       @endif
+       
        <li class="dotted_link" id="observed">Obserwowane (0)
        </li>
        <li class="black_link" id="products_cart"><strong>0 </strong>szt. za <strong>0,00 zł</strong>
@@ -96,8 +109,8 @@
    </nav>
     
       @yield('content')
-    </div>
-    </div>
+    
+  
     <footer>
       <div class="row newsletter">
       <div class="newsletter_title col-md-5 col-lg-5 col-sm-12">
@@ -134,5 +147,7 @@
       </footer>
     
     </div>
+    <script src="{{{ asset('/javascripts/myjs.js') }}}"></script>
+
   </body>
 </html>

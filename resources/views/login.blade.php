@@ -94,13 +94,8 @@
      <input type="search"></input>
      </div>
    </nav>
+    @if (Auth::guest())
     <div class="container"style="padding:0px; font-weight:100;">
-    <div class="col-sm-6 pull-left" style="padding:0px;">
-      
-      <h2 class="text-uppercase" style="font-weight:100;">rejestracja</h2>
-      <p>Jeżeli wcześniej nie założyłeś konta w naszym sklepie, zostaniesz poproszony o podanie swoich danych i adresu dostawy.</p>
-      <button class="black_link"  disabled="disabled"><strong><a href="#" class="">Załóż nowe konto</a></strong></button>
-    </div>
     <div class="col-sm-6">
       <h2 class="text-uppercase" style="font-weight:100;">logowanie</h2>
       <form>
@@ -114,6 +109,10 @@
       
     </div>
     </div>
+    else
+    
+        @yield('content')
+
     <footer>
       <div class="row newsletter">
       <div class="newsletter_title col-md-5 col-lg-5 col-sm-12">

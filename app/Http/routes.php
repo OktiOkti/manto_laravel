@@ -13,9 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','ProductController@index' );
 
 Route::get('products','ProductController@index');
 Route::get('add','ProductController@index');
@@ -44,6 +42,6 @@ Route::controllers([
    'password' => 'Auth\PasswordController',
 ]);
 
-
+Route::auth();
 
 Route::get('/home', 'HomeController@index');
