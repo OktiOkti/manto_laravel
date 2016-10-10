@@ -559,7 +559,9 @@ content: "\f05a";
   left:10px;
 }
 .coloring{
-  background-color: red;
+  background-color: #C35F5C;;
+  
+  
 }
 .hiding{
   visibility: hidden;

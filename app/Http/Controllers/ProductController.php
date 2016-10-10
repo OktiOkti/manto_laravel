@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
-
+use Auth;
 
 
 class ProductController extends Controller
@@ -51,5 +51,13 @@ class ProductController extends Controller
     Product::findOrFail($id)->delete();
     //DB::statement('DBCC CHECKIDENT(products, RESEED, 0);')
     return redirect('add');
+  }
+  public function login_auth(){
+    $products=DB::table('products')->get();// Product::all();
+    if(Auth::guest())
+      return redirect('/');
+    else
+      return View::make('add')->with('products',$products);
+   
   }
 }

@@ -78,9 +78,9 @@
                 </div>
             </div>
         </div>  
-      <div class="col-md-8" style="width:50%;  float:right;">
-                <div >
-                <input type="checkbox" id="check"> *Akceptuję warunki regulaminu. Zgadzam się na otrzymywanie informacji dotyczących zamówień w myśl ustawy z dnia 18 lipca 2002r. o świadczeniu usług drogą elektroniczną.</input>
+      <div class="col-md-8"  style="width:50%;  float:right;">
+                <div  style="margin-top:100px; padding:10px;">
+                <input type="checkbox" id="check" checked="false" > *Akceptuję warunki regulaminu. Zgadzam się na otrzymywanie informacji dotyczących zamówień w myśl ustawy z dnia 18 lipca 2002r. o świadczeniu usług drogą elektroniczną.</input>
                 </div>  
                 
                        </div>

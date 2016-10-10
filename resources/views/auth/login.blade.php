@@ -6,7 +6,7 @@
       <div class="col-sm-6 " style="padding:0px; float:left;">
       
       <h2 class="text-uppercase" style="font-weight:100; ">rejestracja</h2>
-      <p style="font-weight:100;">Jeżeli wcześniej nie założyłeś konta w naszym sklepie, zostaniesz poproszony o podanie swoich danych i adresu dostawy.</p>
+      <p style="">Jeżeli wcześniej nie założyłeś konta w naszym sklepie, zostaniesz poproszony o podanie swoich danych i adresu dostawy.</p>
       <strong><a style="" href="register" class="black_link">Załóż nowe konto</a></strong>
     </div>
     

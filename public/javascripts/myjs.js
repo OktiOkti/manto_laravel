@@ -39,13 +39,24 @@ function color_change(){
       h1.addClass("coloring"); 
   
 })};
+/*$('#check').on('change', function(){ // on change of state
+   if(this.checked) // if changed state is "CHECKED"
+    {
+      
+       $(this.parent).addClass("coloring"); // do the magic here
+    }
+})*/
 function check_it(){
-  $("#check").click(function(){
-    var inp=$("#check");
-    if(document.getElementById('check').checked)
-        inp.addClass("coloring")
-    else
-      inp.removeClass("coloring");
+  $("#check").change(function(){
+if(!this.checked)
+    $("#check").parent().css( "background-color", "#C35F5C" );
+   else
+     $("#check").parent().css( "background-color", "#FFFFFF" );
+    
+     // if(h1.hasClass("coloring"))
+     //inp.removeClass("coloring");
+      
+     
   })
 }
 
@@ -70,7 +81,7 @@ function multiply_add()
 
     
     //$("#add_to_cart_but").prepend($(this));
-  })};
+};
 function swap_image()
 {
   $(".little_image").click(function(){

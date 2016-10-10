@@ -24,6 +24,7 @@ Route::delete('add/{id}', 'ProductController@deleteProduct');
 Route::get('login',function(){
   return view('auth.login');
 });
+Route::get('productnew','ProductController@login_auth');
 Route::controllers([
   'auth' => 'Auth\AuthController',
   'password' => 'Auth\PasswordController',

@@ -11,6 +11,13 @@
      <link href="{{{ asset('/stylesheets/bootstrap.min.css') }}}" rel="stylesheet">
     <link rel="stylesheet" href="{{{ asset('/font-awesome-4.6.3/css/font-awesome.min.css') }}}">
     <link href="{{{ asset('/stylesheets/style.css') }}}" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+     <script src="{{{ asset('javascripts/bootstrap.min.js')}}}"></script>
+    <script type="text/javascript" src="{{ URL::asset('javascripts/bootstrap.min.js') }}"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -175,6 +182,10 @@
   
   
     </div>
+           @if (Auth::guest())
+    <div></div>
+    @else
+    
     <form class="newsletter" method="post" action="add" enctype="multipart/form-data">
       {{csrf_field()}}
       <label>Nazwa</label>
@@ -189,7 +200,7 @@
       <input class="black_link" id="submit" name="submit" type="submit" value="Wyślij">
 
     </form>
-    
+    @endif
     <footer>
       <div class="row newsletter">
       <div class="newsletter_title col-md-5 col-lg-5 col-sm-12">

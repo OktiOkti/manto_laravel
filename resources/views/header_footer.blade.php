@@ -11,9 +11,15 @@
      <link href="{{{ asset('/stylesheets/bootstrap.min.css') }}}" rel="stylesheet">
     <link rel="stylesheet" href="{{{ asset('/font-awesome-4.6.3/css/font-awesome.min.css') }}}">
     <link href="{{{ asset('/stylesheets/style.css') }}}" rel="stylesheet">
-
-
-
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="{{{ asset('/javascripts/myjs.js') }}}"></script>
+    
+    <script type="text/javascript" src="{{ URL::asset('javascripts/myjs.js') }}"></script>
+     <script src="{{{ asset('javascripts/bootstrap.min.js')}}}"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -32,8 +38,8 @@
        @if (Auth::guest())
        <li class="dotted_link" id="your_account">
         
-
-         Twoje konto
+        <a href="login">
+         Twoje konto</a>
          </li>
         @else
        <li class="dotted_link" id="your_account">
@@ -41,6 +47,8 @@
 
         {{ Auth::user()->name }}
          </li>  
+        <li class="dotted_link" ><a href="{{ url('/logout') }}">Wyloguj się</a></li>
+       
        @endif
        
        <li class="dotted_link" id="observed">Obserwowane (0)
